@@ -1,0 +1,63 @@
+$ mocha test/**/*spec.js
+[exit 1 signal  1102ms]
+--- stdout
+
+[0m[0m
+[0m  The dockerfile_lint command[0m
+  [31m  1) should allow a valid Dockerfile[0m
+  [32m  ✓[0m[90m should validate remote (https) Dockerfile [0m[31m(165ms)[0m
+  [32m  ✓[0m[90m should exit with a non-zero error code on an empty file [0m[31m(101ms)[0m
+  [32m  ✓[0m[90m should exit with code 0 on warning when in strict mode  [0m[31m(102ms)[0m
+  [32m  ✓[0m[90m should exit with code 0 on warning when in permissive mode (long form) [0m[31m(101ms)[0m
+  [32m  ✓[0m[90m should exit with code 1 on warning when not in permissive mode  [0m[31m(99ms)[0m
+  [32m  ✓[0m[90m should output valid JSON when in --json mode with multiple Dockerfiles [0m[31m(107ms)[0m
+  [32m  ✓[0m[90m should exit with code 1 and error message when using both --json and --junit options  [0m[31m(90ms)[0m
+  [32m  ✓[0m[90m should output valid XML when in --junit mode [0m[31m(100ms)[0m
+
+[0m  Commands from Inspect function[0m
+  [32m  ✓[0m[90m correctly parses labels [0m
+  [32m  ✓[0m[90m correctly parses user [0m
+  [32m  ✓[0m[90m correctly parses maintainer [0m
+
+[0m  parse function[0m
+  [32m  ✓[0m[90m should correctly parse comments [0m
+  [32m  ✓[0m[90m should correctly strip out comments when asked to [0m
+IGNORING STATEMENT:   RUN echo done
+  [32m  ✓[0m[90m should correctly ignore commands preceeded by an inline ignore [0m
+  [32m  ✓[0m[90m should not ignore commands preceeded by an comment about the inline ignore functionality [0m
+  [32m  ✓[0m[90m should correctly report errors [0m
+
+[0m  rule file loader function[0m
+  [36m  - should throw an error when and incorrect rule specification is provided[0m
+  [32m  ✓[0m[90m should throw an error when there is a cyclic dependency [0m
+  [32m  ✓[0m[90m should throw an error when a non-existent rule file is provided [0m
+  [32m  ✓[0m[90m should throw an error when an included file is not found [0m
+  [32m  ✓[0m[90m should correctly parse a rule file with multiple includes [0m
+  [32m  ✓[0m[90m should correctly load a rule file with an include chain [0m
+
+
+[92m [0m[32m 21 passing[0m[90m (997ms)[0m
+[36m [0m[36m 1 pending[0m
+
+
+--- stderr
+[31m  1 failing[0m
+
+[0m  1) The dockerfile_lint command should allow a valid Dockerfile:
+
+      [31mUncaught AssertionError [ERR_ASSERTION]: expected '(node:434) [DEP0044] DeprecationWarning: The `util.isArray` API is deprecated. Please use `Array.isArray()` instead.\n(Use `node --trace-deprecation ...` to show where the warning was created)\n' to equal ''[0m
+      [42m+ expected[0m [41m- actual[0m
+
+      [42m+""[0m
+      [41m-"(node:434) [DEP0044] DeprecationWarning: The `util.isArray` API is deprecated. Please use `Array.isArray()` instead.\n(Use `node --trace-deprecation ...` to show where the warning was created)\n"[0m
+      [0m[90m
+      at Assertion.fail (/tmp/today/node_modules/should/lib/assertion.js:112:17)
+      at prop.<computed> [as eql] (/tmp/today/node_modules/should/lib/assertion.js:38:14)
+      at /tmp/today/test/integration/exec.spec.js:21:31
+      at ChildProcess.exithandler (node:child_process:413:7)
+      at ChildProcess.emit (node:events:514:20)
+      at maybeClose (node:internal/child_process:1156:16)
+      at ChildProcess._handle.onexit (node:internal/child_process:334:5)
+[0m
+
+

@@ -1,0 +1,299 @@
+$ mocha --reporter json  test/**/*spec.js
+[exit 0 signal  1174ms]
+--- stdout
+IGNORING STATEMENT:   RUN echo done
+{
+  "stats": {
+    "suites": 4,
+    "tests": 23,
+    "passes": 22,
+    "pending": 1,
+    "failures": 0,
+    "start": "2026-11-13T07:03:41.249Z",
+    "end": "2026-11-13T07:03:42.325Z",
+    "duration": 1076
+  },
+  "tests": [
+    {
+      "title": "should allow a valid Dockerfile",
+      "fullTitle": "The dockerfile_lint command should allow a valid Dockerfile",
+      "duration": 106,
+      "err": {}
+    },
+    {
+      "title": "should validate remote (https) Dockerfile",
+      "fullTitle": "The dockerfile_lint command should validate remote (https) Dockerfile",
+      "duration": 232,
+      "err": {}
+    },
+    {
+      "title": "should exit with a non-zero error code on an empty file",
+      "fullTitle": "The dockerfile_lint command should exit with a non-zero error code on an empty file",
+      "duration": 101,
+      "err": {}
+    },
+    {
+      "title": "should exit with code 0 on warning when in strict mode ",
+      "fullTitle": "The dockerfile_lint command should exit with code 0 on warning when in strict mode ",
+      "duration": 100,
+      "err": {}
+    },
+    {
+      "title": "should exit with code 0 on warning when in permissive mode (long form)",
+      "fullTitle": "The dockerfile_lint command should exit with code 0 on warning when in permissive mode (long form)",
+      "duration": 101,
+      "err": {}
+    },
+    {
+      "title": "should exit with code 1 on warning when not in permissive mode ",
+      "fullTitle": "The dockerfile_lint command should exit with code 1 on warning when not in permissive mode ",
+      "duration": 101,
+      "err": {}
+    },
+    {
+      "title": "should output valid JSON when in --json mode with multiple Dockerfiles",
+      "fullTitle": "The dockerfile_lint command should output valid JSON when in --json mode with multiple Dockerfiles",
+      "duration": 108,
+      "err": {}
+    },
+    {
+      "title": "should exit with code 1 and error message when using both --json and --junit options ",
+      "fullTitle": "The dockerfile_lint command should exit with code 1 and error message when using both --json and --junit options ",
+      "duration": 96,
+      "err": {}
+    },
+    {
+      "title": "should output valid XML when in --junit mode",
+      "fullTitle": "The dockerfile_lint command should output valid XML when in --junit mode",
+      "duration": 106,
+      "err": {}
+    },
+    {
+      "title": "correctly parses labels",
+      "fullTitle": "Commands from Inspect function correctly parses labels",
+      "duration": 0,
+      "err": {}
+    },
+    {
+      "title": "correctly parses user",
+      "fullTitle": "Commands from Inspect function correctly parses user",
+      "duration": 0,
+      "err": {}
+    },
+    {
+      "title": "correctly parses maintainer",
+      "fullTitle": "Commands from Inspect function correctly parses maintainer",
+      "duration": 1,
+      "err": {}
+    },
+    {
+      "title": "should correctly parse comments",
+      "fullTitle": "parse function should correctly parse comments",
+      "duration": 0,
+      "err": {}
+    },
+    {
+      "title": "should correctly strip out comments when asked to",
+      "fullTitle": "parse function should correctly strip out comments when asked to",
+      "duration": 0,
+      "err": {}
+    },
+    {
+      "title": "should correctly ignore commands preceeded by an inline ignore",
+      "fullTitle": "parse function should correctly ignore commands preceeded by an inline ignore",
+      "duration": 1,
+      "err": {}
+    },
+    {
+      "title": "should not ignore commands preceeded by an comment about the inline ignore functionality",
+      "fullTitle": "parse function should not ignore commands preceeded by an comment about the inline ignore functionality",
+      "duration": 0,
+      "err": {}
+    },
+    {
+      "title": "should correctly report errors",
+      "fullTitle": "parse function should correctly report errors",
+      "duration": 1,
+      "err": {}
+    },
+    {
+      "title": "should throw an error when and incorrect rule specification is provided",
+      "fullTitle": "rule file loader function should throw an error when and incorrect rule specification is provided",
+      "err": {}
+    },
+    {
+      "title": "should throw an error when there is a cyclic dependency",
+      "fullTitle": "rule file loader function should throw an error when there is a cyclic dependency",
+      "duration": 4,
+      "err": {}
+    },
+    {
+      "title": "should throw an error when a non-existent rule file is provided",
+      "fullTitle": "rule file loader function should throw an error when a non-existent rule file is provided",
+      "duration": 0,
+      "err": {}
+    },
+    {
+      "title": "should throw an error when an included file is not found",
+      "fullTitle": "rule file loader function should throw an error when an included file is not found",
+      "duration": 1,
+      "err": {}
+    },
+    {
+      "title": "should correctly parse a rule file with multiple includes",
+      "fullTitle": "rule file loader function should correctly parse a rule file with multiple includes",
+      "duration": 7,
+      "err": {}
+    },
+    {
+      "title": "should correctly load a rule file with an include chain",
+      "fullTitle": "rule file loader function should correctly load a rule file with an include chain",
+      "duration": 4,
+      "err": {}
+    }
+  ],
+  "pending": [
+    {
+      "title": "should throw an error when and incorrect rule specification is provided",
+      "fullTitle": "rule file loader function should throw an error when and incorrect rule specification is provided",
+      "err": {}
+    }
+  ],
+  "failures": [],
+  "passes": [
+    {
+      "title": "should allow a valid Dockerfile",
+      "fullTitle": "The dockerfile_lint command should allow a valid Dockerfile",
+      "duration": 106,
+      "err": {}
+    },
+    {
+      "title": "should validate remote (https) Dockerfile",
+      "fullTitle": "The dockerfile_lint command should validate remote (https) Dockerfile",
+      "duration": 232,
+      "err": {}
+    },
+    {
+      "title": "should exit with a non-zero error code on an empty file",
+      "fullTitle": "The dockerfile_lint command should exit with a non-zero error code on an empty file",
+      "duration": 101,
+      "err": {}
+    },
+    {
+      "title": "should exit with code 0 on warning when in strict mode ",
+      "fullTitle": "The dockerfile_lint command should exit with code 0 on warning when in strict mode ",
+      "duration": 100,
+      "err": {}
+    },
+    {
+      "title": "should exit with code 0 on warning when in permissive mode (long form)",
+      "fullTitle": "The dockerfile_lint command should exit with code 0 on warning when in permissive mode (long form)",
+      "duration": 101,
+      "err": {}
+    },
+    {
+      "title": "should exit with code 1 on warning when not in permissive mode ",
+      "fullTitle": "The dockerfile_lint command should exit with code 1 on warning when not in permissive mode ",
+      "duration": 101,
+      "err": {}
+    },
+    {
+      "title": "should output valid JSON when in --json mode with multiple Dockerfiles",
+      "fullTitle": "The dockerfile_lint command should output valid JSON when in --json mode with multiple Dockerfiles",
+      "duration": 108,
+      "err": {}
+    },
+    {
+      "title": "should exit with code 1 and error message when using both --json and --junit options ",
+      "fullTitle": "The dockerfile_lint command should exit with code 1 and error message when using both --json and --junit options ",
+      "duration": 96,
+      "err": {}
+    },
+    {
+      "title": "should output valid XML when in --junit mode",
+      "fullTitle": "The dockerfile_lint command should output valid XML when in --junit mode",
+      "duration": 106,
+      "err": {}
+    },
+    {
+      "title": "correctly parses labels",
+      "fullTitle": "Commands from Inspect function correctly parses labels",
+      "duration": 0,
+      "err": {}
+    },
+    {
+      "title": "correctly parses user",
+      "fullTitle": "Commands from Inspect function correctly parses user",
+      "duration": 0,
+      "err": {}
+    },
+    {
+      "title": "correctly parses maintainer",
+      "fullTitle": "Commands from Inspect function correctly parses maintainer",
+      "duration": 1,
+      "err": {}
+    },
+    {
+      "title": "should correctly parse comments",
+      "fullTitle": "parse function should correctly parse comments",
+      "duration": 0,
+      "err": {}
+    },
+    {
+      "title": "should correctly strip out comments when asked to",
+      "fullTitle": "parse function should correctly strip out comments when asked to",
+      "duration": 0,
+      "err": {}
+    },
+    {
+      "title": "should correctly ignore commands preceeded by an inline ignore",
+      "fullTitle": "parse function should correctly ignore commands preceeded by an inline ignore",
+      "duration": 1,
+      "err": {}
+    },
+    {
+      "title": "should not ignore commands preceeded by an comment about the inline ignore functionality",
+      "fullTitle": "parse function should not ignore commands preceeded by an comment about the inline ignore functionality",
+      "duration": 0,
+      "err": {}
+    },
+    {
+      "title": "should correctly report errors",
+      "fullTitle": "parse function should correctly report errors",
+      "duration": 1,
+      "err": {}
+    },
+    {
+      "title": "should throw an error when there is a cyclic dependency",
+      "fullTitle": "rule file loader function should throw an error when there is a cyclic dependency",
+      "duration": 4,
+      "err": {}
+    },
+    {
+      "title": "should throw an error when a non-existent rule file is provided",
+      "fullTitle": "rule file loader function should throw an error when a non-existent rule file is provided",
+      "duration": 0,
+      "err": {}
+    },
+    {
+      "title": "should throw an error when an included file is not found",
+      "fullTitle": "rule file loader function should throw an error when an included file is not found",
+      "duration": 1,
+      "err": {}
+    },
+    {
+      "title": "should correctly parse a rule file with multiple includes",
+      "fullTitle": "rule file loader function should correctly parse a rule file with multiple includes",
+      "duration": 7,
+      "err": {}
+    },
+    {
+      "title": "should correctly load a rule file with an include chain",
+      "fullTitle": "rule file loader function should correctly load a rule file with an include chain",
+      "duration": 4,
+      "err": {}
+    }
+  ]
+}
+--- stderr
+

@@ -1,0 +1,105 @@
+{
+ "v": 1,
+ "started": "2026-11-13T07:03:37.444Z",
+ "target_runtime": "v26.13.1",
+ "target_major_expected": 26,
+ "target_is_expected": true,
+ "steps": [
+  {
+   "name": "install-locked",
+   "exit": 0,
+   "ms": 1775
+  },
+  {
+   "name": "historical-test-1",
+   "exit": 0,
+   "ms": 1212
+  },
+  {
+   "name": "historical-mocha-json-1",
+   "exit": 0,
+   "ms": 1174
+  },
+  {
+   "name": "historical-test-2",
+   "exit": 0,
+   "ms": 1309
+  },
+  {
+   "name": "historical-mocha-json-2",
+   "exit": 0,
+   "ms": 1127
+  },
+  {
+   "name": "today-install",
+   "exit": 0,
+   "ms": 750
+  },
+  {
+   "name": "today-test",
+   "exit": 1,
+   "ms": 1102
+  }
+ ],
+ "source": {
+  "source": "projectatomic/dockerfile_lint",
+  "sha": "9dd5e91491599fd4fcf57622c675a477ba0122ab",
+  "commit_date": "2020-07-30T19:02:11-04:00",
+  "symlinks_removed": 0,
+  "spdx": "MIT",
+  "license_file": "LICENSE",
+  "license_sha256": "bda8581d82a44b8d14b583f459c216d93770330ab927e214e7b92a65530d6577",
+  "notice_files": [],
+  "copyright_lines": [
+   "Copyright (c) 2014 Red Hat, Inc."
+  ]
+ },
+ "test_script": "mocha test/**/*spec.js",
+ "runtime_choice": {
+  "line": "12",
+  "rule": "highest version in .travis.yml"
+ },
+ "runtime": {
+  "line": "12",
+  "version": "12.22.12",
+  "file": "node-v12.22.12-linux-x64.tar.gz",
+  "source": "https://nodejs.org/dist/v12.22.12/node-v12.22.12-linux-x64.tar.gz",
+  "checksum_source": "https://nodejs.org/dist/v12.22.12/SHASUMS256.txt",
+  "expected_sha256": "ff92a45c4d03e8e270bec1ab337b8fff6e9de293dabfe7e8936a41f2fb0b202e",
+  "actual_sha256": "ff92a45c4d03e8e270bec1ab337b8fff6e9de293dabfe7e8936a41f2fb0b202e",
+  "verification": "verified",
+  "verified": true,
+  "reports": "v12.22.12"
+ },
+ "install": {
+  "lock_file": "package-lock.json",
+  "method": "lock file",
+  "packages": 89,
+  "without_integrity": 0,
+  "install_scripts_skipped": 3,
+  "non_registry": 0
+ },
+ "historical_runs": [
+  {
+   "test_script_exit": 0,
+   "structured": true,
+   "passes": 22,
+   "failures": 0
+  },
+  {
+   "test_script_exit": 0,
+   "structured": true,
+   "passes": 22,
+   "failures": 0
+  }
+ ],
+ "stable_passing_tests": 22,
+ "level": "H1",
+ "today": {
+  "runtime": "v26.13.1",
+  "install_exit": 0,
+  "test_exit": 1,
+  "broken_today": true
+ },
+ "finished": "2026-11-13T07:03:46.627Z"
+}
